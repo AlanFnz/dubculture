@@ -1,0 +1,70 @@
+{
+  "plugins": ["react", "react-hooks"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:promise/recommended",
+    "plugin:jsx-a11y/recommended",
+    "standard",
+    "prettier" // this should be last so to disable all formatting rules in previous configurations
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2017": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "camelcase": "off",
+    "prefer-const": "off",
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "line": {
+          "markers": ["/"],
+          "exceptions": ["-", "+", "/"]
+        },
+        "block": {
+          "markers": ["!"],
+          "exceptions": ["*"],
+          "balanced": true
+        }
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-unused-prop-types": "warn",
+    "react/forbid-prop-types": "warn",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "object-curly-spacing": "off",
+    "promise/always-return": "off",
+    "promise/no-callback-in-promise": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "linkComponents": [
+      // Components used as alternatives to <a>. For example, react-router's <Link to={ url } /> and <NavLink to={ url } />
+      { "name": "NavLink", "linkAttribute": "to" },
+      { "name": "Link", "linkAttribute": "to" }
+    ]
+    // 	"import/resolver": {
+    // 		"node": {
+    // 			"paths": [
+    // 				"src"
+    // 			]
+    // 		}
+    // 	}
+  }
+}
