@@ -14,7 +14,7 @@ function App() {
         <div className="container">
           <Header />
         </div>
-        <Route path="/">
+        <Route exact path="/">
           <Linktree links={links} />
         </Route>
         <Footer />
