@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "./Link";
-import "./Linktree.scss";
+
+import "./_d_Linktree.scss";
 
 export function Linktree({ links }) {
   return (
