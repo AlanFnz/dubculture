@@ -1,10 +1,11 @@
 import React from "react";
 // import logo from "./logo.svg";
-import { links } from "./data/links";
+import { links, dubfree } from "./data/data";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Linktree } from "./components/linktree/Linktree";
+import { DubfreeForm } from "./components/dubfreeForm/DubfreeForm";
 import { Header } from "./components/layout/Header";
-import { Footer } from "./components/layout/Footer";
+// import { Footer } from "./components/layout/Footer";
 import "./App.scss";
 
 function App() {
@@ -14,10 +15,13 @@ function App() {
         <div className="container">
           <Header />
         </div>
-        <Route path="/">
+        <Route exact path="/">
           <Linktree links={links} />
         </Route>
-        <Footer />
+        <Route path="/dubfree">
+          <DubfreeForm dubfree={dubfree} />
+        </Route>
+        {/* <Footer /> */}
       </div>
     </Router>
   );

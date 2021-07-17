@@ -1,0 +1,12 @@
+.cnt-linktree {
+  max-width: 45vw;
+  margin: 0 auto;
+  background-color: rgba(23, 23, 23, 0.2);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  padding: 5vw 0;
+}
+
+@media screen and (max-width: 605px) {
+  @import "./_m_Linktree.scss";
+}
