@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "./logo.svg";
 import { links, dubfree } from "./data/data";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Linktree } from "./components/linktree/Linktree";
