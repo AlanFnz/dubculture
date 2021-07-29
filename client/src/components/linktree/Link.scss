@@ -1,16 +1,22 @@
 .cnt-link-button {
-  width: 80%;
-  max-width: 500px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  width: 100%;
+  padding: 8px 0;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 22px auto;
-  background-color: white;
+  text-decoration: none;
+  margin: 22px 0;
+  background-color: rgba(163, 163, 163, 0.199);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
   border-radius: 2px;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .tt-link {
-  text-decoration: none;
-  color: black;
+  color: white;
 }
